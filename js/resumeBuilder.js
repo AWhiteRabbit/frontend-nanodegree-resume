@@ -28,16 +28,6 @@ var formattedPic = HTMLbioPic.replace('%data%', './images/fry.jpg');
 $('#header').prepend(formattedRole);
 $('#header').prepend(formattedName);
 $('#header').append(formattedPic);
-/*$('#topContacts').append(formattedmobile);
-$('#topContacts').append(formattedemail);
-$('#topContacts').append(formattedtwitter);
-$('#topContacts').append(formattedgithub);
-$('#topContacts').append(formattedlocation);
-$('#footerContacts').append(formattedmobile);
-$('#footerContacts').append(formattedemail);
-$('#footerContacts').append(formattedtwitter);
-$('#footerContacts').append(formattedgithub);
-$('#footerContacts').append(formattedlocation);*/
 var contactinfo = formattedmobile + formattedemail + formattedtwitter + formattedgithub + formattedlocation;
 $('#topContacts').append(contactinfo);
 $('#footerContacts').append(contactinfo);
