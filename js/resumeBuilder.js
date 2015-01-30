@@ -54,14 +54,19 @@ var work = {
             "title": "delivery",
             "location": "on jobsite",
             "dates": "Summer 2014",
-            "description": "Are you suggesting that coconuts migrate? The nose? The swallow may fly south with the sun, and the house martin or the plover may seek warmer climes in winter, yet these are not strangers to our land. The nose? Be quiet! We found them."
+            "description": "Are you suggesting that coconuts migrate? The nose? The swallow may fly south with the sun," +
+            " and the house martin or the plover may seek warmer climes in winter, yet these are not strangers to our land." +
+            " The nose? Be quiet! We found them."
         },
         {
             "employer": "Mlube",
             "title": "scum",
             "location": "Garage site",
             "dates": "Jan - present",
-            "description": "Daddy Bender, we're hungry. Bender, hurry! This fuel's expensive! Also, we're dying! Goodbye, cruel world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes, lined with what would appear to be some sort of cruel muslin and the cute little pom-pom curtain pull cords. Cruel though they may be"
+            "description": "Daddy Bender, we're hungry. Bender, hurry! This fuel's expensive! Also," +
+            " we're dying! Goodbye, cruel world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes," +
+            " lined with what would appear to be some sort of cruel muslin and the cute little pom-pom curtain pull cords." +
+            " Cruel though they may be"
         }
     ]
 };
@@ -94,7 +99,7 @@ var education = {
         {
             "name": "Udacity",
             "location": "online",
-            "degree": "Nanodegree",
+            "degree": "Udacity Nanodegree",
             "majors": [
                 "Front End",
                 "Web Developer"
@@ -176,3 +181,28 @@ projects.display = function() {
 };
 
 projects.display();
+
+education.display = function() {
+    for (i in education.schools) {
+        $('#education').append(HTMLschoolStart);
+        var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[i].name);
+        var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[i].degree);
+        var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[i].date);
+        var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[i].location);
+       // var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools.[i].majors);
+        $('.education-entry:last').append(formattedSchoolName);
+        $('.education-entry:last').append(formattedSchoolDegree);
+        $('.education-entry:last').append(formattedSchoolDates);
+        $('.education-entry:last').append(formattedSchoolLocation);
+        //$('#education-entry: last').append(formattedSchoolMajor);
+        if (education.schools[i].majors.length > 0) {
+            for (major in education.schools[i].majors) {
+                var formattedSchoolMajor =HTMLschoolMajor.replace('%data%', education.schools[i].majors[major]);
+                    $('.education-entry:last').append(formattedSchoolMajor);
+            }
+        }
+    }
+
+};
+
+education.display();
