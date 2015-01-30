@@ -15,7 +15,46 @@ var bio = {
         "sales",
         "staying up late"
     ],
-    "biopic": "./images/fry.jpg"
+    "biopic": "./images/fry.jpg",
+    'display': function () {
+    	var formattedName = HTMLheaderName.replace('%data%', bio.name);
+var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
+var formattedmobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
+var formattedemail = HTMLemail.replace('%data%', bio.contacts.email);
+var formattedtwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
+var formattedgithub = HTMLgithub.replace('%data%', bio.contacts.github);
+var formattedlocation = HTMLlocation.replace('%data%', bio.contacts.location);
+var formattedPic = HTMLbioPic.replace('%data%', './images/fry.jpg');
+$('#header').prepend(formattedRole);
+$('#header').prepend(formattedName);
+$('#header').append(formattedPic);
+/*$('#topContacts').append(formattedmobile);
+$('#topContacts').append(formattedemail);
+$('#topContacts').append(formattedtwitter);
+$('#topContacts').append(formattedgithub);
+$('#topContacts').append(formattedlocation);
+$('#footerContacts').append(formattedmobile);
+$('#footerContacts').append(formattedemail);
+$('#footerContacts').append(formattedtwitter);
+$('#footerContacts').append(formattedgithub);
+$('#footerContacts').append(formattedlocation);*/
+var contactinfo = formattedmobile + formattedemail + formattedtwitter + formattedgithub + formattedlocation;
+$('#topContacts').append(contactinfo);
+$('#footerContacts').append(contactinfo);
+
+if (bio.skills.length > 0) {
+	$('#header').append(HTMLskillsStart);
+
+	var formattedSkill = HTMLskills.replace('%data%' , bio.skills[0]);
+	$('#header').append(formattedSkill);
+	formattedSkill = HTMLskills.replace('%data%' , bio.skills[1]);
+	$('#header').append(formattedSkill);
+	formattedSkill = HTMLskills.replace('%data%' , bio.skills[2]);
+	$('#header').append(formattedSkill);
+	formattedSkill = HTMLskills.replace('%data%' , bio.skills[3]);
+	$('#header').append(formattedSkill);
+};
+    }
 };
 
 var work = {
@@ -25,14 +64,14 @@ var work = {
             "title": "delivery",
             "location": "on jobsite",
             "dates": "Summer 2014",
-            "description": "Too much work for too little rest."
+            "description": "Are you suggesting that coconuts migrate? The nose? The swallow may fly south with the sun, and the house martin or the plover may seek warmer climes in winter, yet these are not strangers to our land. The nose? Be quiet! We found them."
         },
         {
             "employer": "Mlube",
             "title": "scum",
             "location": "Garage site",
             "dates": "Jan - present",
-            "description": "Too much work for too little cost."
+            "description": "Daddy Bender, we're hungry. Bender, hurry! This fuel's expensive! Also, we're dying! Goodbye, cruel world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes, lined with what would appear to be some sort of cruel muslin and the cute little pom-pom curtain pull cords. Cruel though they may be"
         }
     ]
 };
@@ -63,7 +102,7 @@ var projects = {
 var education = {
     "schools": [
         {
-            "name": "udacity",
+            "name": "Udacity",
             "location": "online",
             "degree": "Nanodegree",
             "majors": [
@@ -107,25 +146,7 @@ var education = {
     ]
 };
 
-var formattedName = HTMLheaderName.replace('%data%', bio.name);
-var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
-var formattedPic = HTMLbioPic.replace('%data%', './images/fry.jpg');
-$('#header').append(formattedName);
-$('#header').append(formattedRole);
-$('#header').append(formattedPic);
-
-if (bio.skills.length > 0) {
-	$('#header').append(HTMLskillsStart);
-
-	var formattedSkill = HTMLskills.replace('%data%' , bio.skills[0]);
-	$('#header').append(formattedSkill);
-	formattedSkill = HTMLskills.replace('%data%' , bio.skills[1]);
-	$('#header').append(formattedSkill);
-	formattedSkill = HTMLskills.replace('%data%' , bio.skills[2]);
-	$('#header').append(formattedSkill);
-	formattedSkill = HTMLskills.replace('%data%' , bio.skills[3]);
-	$('#header').append(formattedSkill);
-};
+bio.display();
 
 function displayWork(){
 	for (job in work.jobs) {
