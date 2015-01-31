@@ -52,7 +52,7 @@ var work = {
         {
             "employer": "Wickens",
             "title": "delivery",
-            "location": "on jobsite",
+            "location": "Milton, ON",
             "dates": "Summer 2014",
             "description": "Are you suggesting that coconuts migrate? The nose? The swallow may fly south with the sun," +
             " and the house martin or the plover may seek warmer climes in winter, yet these are not strangers to our land." +
@@ -61,7 +61,7 @@ var work = {
         {
             "employer": "Mlube",
             "title": "scum",
-            "location": "Garage site",
+            "location": "Mississauga, ON",
             "dates": "Jan - present",
             "description": "Daddy Bender, we're hungry. Bender, hurry! This fuel's expensive! Also," +
             " we're dying! Goodbye, cruel world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes," +
@@ -98,7 +98,7 @@ var education = {
     "schools": [
         {
             "name": "Udacity",
-            "location": "online",
+            "location": "Winnepeg, MN",
             "degree": "Udacity Nanodegree",
             "majors": [
                 "One Front End",
@@ -109,7 +109,7 @@ var education = {
         },
         {
             "name": "udacity",
-            "location": "online",
+            "location": "Toronto, ON",
             "degree": "Nanodegree",
             "majors": [
                 "Two Front End",
