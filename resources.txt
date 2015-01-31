@@ -1,0 +1,23 @@
+
+placehold.it
+
+placekitten.com
+
+piazza.com discussion forums - specifically the "folder:p2" search
+
+github.com
+	https://github.com/udacity/frontend-nanodegree-resume
+	https://github.com/AWhiteRabbit/frontend-nanodegree-resume
+
+http://api.jquery.com/
+
+jsonlint.com
+
+http://www.jslint.com/
+
+http://jstutor.herokuapp.com/#          visualize functions and how things are referenced (the python version is much much better!)
+	https://github.com/udacity/frontend-nanodegree-resume
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+https://developers.google.com/maps/documentation/javascript/infowindows
